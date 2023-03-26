@@ -6,7 +6,7 @@ I have used two models to do the same
 
 About the data:
 
-The water_potability.csv file contains water quality metrics for 3276 different water bodies.
+The dataset file contains water quality metrics for 3276 different water bodies.
 
 1. pH value:
 PH is an important parameter in evaluating the acid–base balance of water. It is also the indicator of acidic or alkaline condition of water status. WHO has recommended maximum permissible limit of pH from 6.5 to 8.5. The current investigation ranges were 6.52–6.83 which are in the range of WHO standards.
@@ -39,5 +39,7 @@ The turbidity of water depends on the quantity of solid matter present in the su
 Indicates if water is safe for human consumption where 1 means Potable and 0 means Not potable.
 
 
+
+Access to safe drinking-water is essential to health, a basic human right and a component of effective policy for health protection. This is important as a health and development issue at a national, regional and local level. In some regions, it has been shown that investments in water supply and sanitation can yield a net economic benefit, since the reductions in adverse health effects and health care costs outweigh the costs of undertaking the interventions.
 
 DATA LINK: https://www.kaggle.com/datasets/adityakadiwal/water-potability
