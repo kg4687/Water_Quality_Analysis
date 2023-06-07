@@ -6,17 +6,15 @@ import streamlit as st
 loaded_model = pickle.load(open('Water_potablity_trained_model.sav','rb'))
 
 #creating a function for prediction
-def gold_price_prediction(input_data):
-    #changing the input_data to numpy data
-    input_data_as_numpy_array = np.asarray(input_data)
-    
-    #reshape the array
-    input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
-    
-    prediction = loaded_model.predict(input_data_reshaped)
+def water_prediction (input_data):
+    input_data_as_np_array = np.asarray(input_data)
+    input_data_reshape = input_data_as_np_array.reshape(1,-1)
+    prediction = loaded_model.predict(input_data_reshape)
     print(prediction)
-    
-    return prediction
+    if(prediction[0] ==0):
+        return 'Water is not potable'
+    else:
+        return 'Water is Potable'
 def main():
     #giving the title
     st.title('Water Quality Predictor Web App')
@@ -34,13 +32,13 @@ def main():
     Turbidity = st.text_input('Enter Turbidity value : ')
     
     #code for prediction
-    predicted_price = ''
+    potable = ''
     
     #getting input data from the user
     if st.button('Water is Potable or not: '):
-        predicted_price = gold_price_prediction([pH,Hardness,solids,Chloramines,Sulfate,Conductivity,Organic_carbon,Trihalomethanes,Turbidity])
+       potable = water_prediction([pH,Hardness,solids,Chloramines,Sulfate,Conductivity,Organic_carbon,Trihalomethanes,Turbidity])
         
-    st.success(predicted_price)
+    st.success(potable)
 
 #Driver Code
 if __name__ == '__main__':
