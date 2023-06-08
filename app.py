@@ -35,7 +35,7 @@ def main():
     potable = ''
     
     #getting input data from the user
-    if st.button('Water is Potable or not: '):
+    if st.button('Water Quality test result: '):
        potable = water_prediction([pH,Hardness,solids,Chloramines,Sulfate,Conductivity,Organic_carbon,Trihalomethanes,Turbidity])
         
     st.success(potable)
