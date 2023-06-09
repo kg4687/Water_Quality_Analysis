@@ -3,7 +3,7 @@ import pickle
 import streamlit as st
 
 #loading the saved model
-loaded_model = pickle.load(open('Water_potablity_trained_model.sav','rb'))
+loaded_model = pickle.load(open('Water_potablity_trained_model.sav','wb'))
 
 #creating a function for prediction
 def water_prediction (input_data):
