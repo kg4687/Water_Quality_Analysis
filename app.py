@@ -39,14 +39,6 @@ def main():
        potable = water_prediction([pH,Hardness,solids,Chloramines,Sulfate,Conductivity,Organic_carbon,Trihalomethanes,Turbidity])
         
     st.success(potable)
-    
-    def predict(): 
-    row = np.array([passengerid,pclass,name,sex,age,sibsp,parch,ticket,fare,cabin,embarked]) 
-    X = pd.DataFrame([row], columns = columns)
-    prediction = model.predict(X)
-    if prediction[0] == 1: 
-        st.success('Passenger Survived :thumbsup:')
-    else: 
-        st.error('Passenger did not Survive :thumbsdown:') 
 
-trigger = st.button('Predict', on_click=predict)
+if __name__ == '__main__':
+    main()
