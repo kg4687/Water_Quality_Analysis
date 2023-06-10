@@ -1,3 +1,4 @@
+#importing the libraries
 import numpy as np
 import pickle
 import streamlit as st
@@ -40,5 +41,5 @@ def main():
         
     st.success(potable)
 
-if __name__ == '__main__':
+if True:
     main()
