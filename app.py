@@ -41,5 +41,6 @@ def main():
         
     st.success(potable)
 
-if True:
+    
+if  __name__ == '__main__':
     main()
